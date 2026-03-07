@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { CiCircleInfo } from 'react-icons/ci'
 import { IoHelpBuoyOutline, IoHome } from 'react-icons/io5'
 import { MdEmail } from 'react-icons/md'
 import { Link, NavLink } from 'react-router-dom'
+import { GlobalcontextApi } from '../../context/Globalcontext'
 
 const Navbar = () => {
     const navlist=[
@@ -28,6 +29,9 @@ const Navbar = () => {
             icon:<IoHelpBuoyOutline />
         },
     ]
+
+    const {currentuser}=useContext(GlobalcontextApi)
+    console.log(currentuser)
   return (
    <nav className=" w-full h-19.5 bg-slate-900 text-gray-200 shadow-lg flex justify-around">
       <div className='w-[10%] h-full flex items-center justify-center text-3xl font-extrabold '>
@@ -48,9 +52,11 @@ const Navbar = () => {
            
       </ul>
       <div className='w-[10%] h-full flex items-center justify-center'>
-        <button className="px-6 py-2 rounded-md text-white font-medium bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 transition duration-300 shadow-md">
+        {
+            !currentuser?<button className="px-6 py-2 rounded-md text-white font-medium bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 transition duration-300 shadow-md">
             <Link to="/login">Login</Link>
-        </button>
+        </button>: <h1>{currentuser.username}</h1> 
+        }
       </div>
     </nav>
   )

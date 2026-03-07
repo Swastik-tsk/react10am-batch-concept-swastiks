@@ -8,6 +8,9 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import UserDashboard from "../dashboard/UserDashboard";
 import PrivateRouting from "../privaterouting/PrivateRouting";
+import DashboardHome from "../dashboard/dashboardpages/DashboardHome";
+import Profile from "../dashboard/dashboardpages/Profile";
+import UpdateProfile from "../dashboard/dashboardpages/UpdateProfile";
 
 
 export const routes=createBrowserRouter([
@@ -35,7 +38,21 @@ export const routes=createBrowserRouter([
                 path:"/dashboard",
                 element:<PrivateRouting>
                     <UserDashboard/>
-                </PrivateRouting>
+                </PrivateRouting>,
+                children:[
+                    {
+                        path:"/dashboard",
+                        element:<DashboardHome/>
+                    },
+                    {
+                        path:"/dashboard/profile",
+                        element:<Profile/>
+                    },
+                    {
+                        path:"/dashboard/updateprofile",
+                        element:<UpdateProfile/>
+                    }
+                ]
             }
         ]
     },
