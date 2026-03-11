@@ -26,12 +26,12 @@ const UserDashboard = () => {
     
     {
       text:"add notes",
-      path:"/addnotes",
+      path:`/dashboard/addnotes/${id}`,
       icon:<IoIosAddCircleOutline />
     },
     {
-      text:"update notes",
-      path:"/updatenotes",
+      text:"All notes",
+      path:`/dashboard/allnotes/${id}`,
       icon:<MdOutlineAddTask />
     }
   ]

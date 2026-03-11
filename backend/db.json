@@ -9,6 +9,39 @@
       "dob": "2026-03-19",
       "city": "Bangalore",
       "gender": "Female"
+    },
+    {
+      "id": "517a",
+      "username": "sundari",
+      "age": "23",
+      "email": "sundari@gmail.com",
+      "password": "123",
+      "dob": "2026-03-08",
+      "city": "Hyderabad",
+      "gender": "Female"
+    }
+  ],
+  "notes": [
+    {
+      "id": "81ed",
+      "title": "React js",
+      "description": "Read React js",
+      "tags": "#Study",
+      "userId": "9e8c"
+    },
+    {
+      "id": "db90",
+      "title": "HTML",
+      "description": "Read HTML",
+      "tags": "#love",
+      "userId": "9e8c"
+    },
+    {
+      "id": "9493",
+      "title": "Propose Lavan",
+      "description": "today i need to propose lavan",
+      "tags": "#love",
+      "userId": "517a"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
