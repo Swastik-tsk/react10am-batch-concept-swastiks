@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const NoteCard = ({data}) => {
+const NoteCard = ({data,deleteNotes}) => {
   return (
     <div className="max-w-sm mx-auto mt-6 bg-white shadow-md rounded-xl overflow-hidden border border-gray-200">
       <div className="p-4">
@@ -25,9 +26,9 @@ const NoteCard = ({data}) => {
         {/* Buttons */}
         <div className="flex justify-end gap-2">
           <button className="px-3 py-1 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg text-sm font-medium">
-            Update
+           <Link to={`/dashboard/updatenote/${data.userId}/${data.id}`}>Update</Link>
           </button>
-          <button className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm font-medium">
+          <button className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm font-medium" onClick={()=>deleteNotes(data.id)}>
             Delete
           </button>
         </div>
