@@ -27,6 +27,7 @@ import { ToastContainer } from 'react-toastify'
 // import ReactWithFireBase from './concepts/firebaseconcept/ReactWithFireBase'
 // import RegisterUser from './concepts/firebaseconcept/components/RegisterUser'
 import ReactFirebaseTask from './concepts/firebaseconcept/ReactFirebaseTask'
+import LazyLoading_CodeSpliting from './concepts/lazyloadingandcodespliting/LazyLoading_CodeSpliting'
 
 const App = () => {
   return (
@@ -58,7 +59,8 @@ const App = () => {
       {/* <GitHubusersFetch/> */}
       {/* <ReactWithFireBase/> */}
       {/* <RegisterUser/> */}
-      <ReactFirebaseTask/>
+      {/* <ReactFirebaseTask/> */}
+      <LazyLoading_CodeSpliting/>
         <ToastContainer/>
     </div>
   )
